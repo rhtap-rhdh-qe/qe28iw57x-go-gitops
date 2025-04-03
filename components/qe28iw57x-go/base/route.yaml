@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: qe28iw57x-go
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: qe28iw57x-go 
+  name: qe28iw57x-go
+spec:
+  port:
+    targetPort: 8081 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: qe28iw57x-go
+    weight: 100 

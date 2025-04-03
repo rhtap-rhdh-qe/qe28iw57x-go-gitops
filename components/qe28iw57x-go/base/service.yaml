@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: qe28iw57x-go
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: qe28iw57x-go 
+  name: qe28iw57x-go
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: qe28iw57x-go 
